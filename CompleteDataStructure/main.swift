@@ -8,69 +8,69 @@
 
 import Foundation
 
-var linkedList = LinkedList<Int>()
-linkedList.append(1)
-linkedList.append(2)
-linkedList.append(3)
-
-var linkedList2 = LinkedList<Int>()
-linkedList2.append(5)
-linkedList2.append(6)
-linkedList2.append(7)
-
-print("Before inserting: \(linkedList)")
-var middle = linkedList.node(at: 1)
-
-middle = linkedList.insert(after: middle!, val: 10)
-
-print("After inserting: \(linkedList)")
+//var linkedList = LinkedList<Int>()
+//linkedList.append(1)
+//linkedList.append(2)
+//linkedList.append(3)
 //
-linkedList.remove(at: 2)
-print("After remove: \(linkedList)")
-
-linkedList.removeLast()
-print("After pop: \(linkedList)")
-
-
-
-let reverse = LinkedList<Int>.reverseLinkedList(node: linkedList.head)
-print("After reverse: \(reverse!)")
-
-let combine = LinkedList<Int>.mergeTwoList(node: linkedList, node: linkedList2)
-print("After Merge: \(combine)")
-
-
-
-// ------------- Tree ---------------
-
-var tree = TreeNode("Shoes")
-
-var casual = TreeNode("Casual")
-var sport = TreeNode("Sport")
-
-tree.add(casual)
-tree.add(sport)
-
-var steveMadden = TreeNode("Steve Madden")
-var ralph = TreeNode("Ralph")
-
-casual.add(steveMadden)
-casual.add(ralph)
-
-var nike = TreeNode("Nike")
-var puma = TreeNode("Puma")
-
-sport.add(nike)
-sport.add(puma)
-
-tree.forEachDepthFirst { (node) in
-    print(node.value)
-}
-
-tree.levelOrder { (node) in
-    print(node.value)
-}
-
+//var linkedList2 = LinkedList<Int>()
+//linkedList2.append(5)
+//linkedList2.append(6)
+//linkedList2.append(7)
+//
+//print("Before inserting: \(linkedList)")
+//var middle = linkedList.node(at: 1)
+//
+//middle = linkedList.insert(after: middle!, val: 10)
+//
+//print("After inserting: \(linkedList)")
+////
+//linkedList.remove(at: 2)
+//print("After remove: \(linkedList)")
+//
+//linkedList.removeLast()
+//print("After pop: \(linkedList)")
+//
+//
+//
+//let reverse = LinkedList<Int>.reverseLinkedList(node: linkedList.head)
+//print("After reverse: \(reverse!)")
+//
+//let combine = LinkedList<Int>.mergeTwoList(node: linkedList, node: linkedList2)
+//print("After Merge: \(combine)")
+//
+//
+//
+//// ------------- Tree ---------------
+//
+//var tree = TreeNode("Shoes")
+//
+//var casual = TreeNode("Casual")
+//var sport = TreeNode("Sport")
+//
+//tree.add(casual)
+//tree.add(sport)
+//
+//var steveMadden = TreeNode("Steve Madden")
+//var ralph = TreeNode("Ralph")
+//
+//casual.add(steveMadden)
+//casual.add(ralph)
+//
+//var nike = TreeNode("Nike")
+//var puma = TreeNode("Puma")
+//
+//sport.add(nike)
+//sport.add(puma)
+//
+//tree.forEachDepthFirst { (node) in
+//    print(node.value)
+//}
+//
+//tree.levelOrder { (node) in
+//    print(node.value)
+//}
+//
 
 // ------------- Tree ---------------
 
@@ -82,26 +82,30 @@ var binaryTree: BinaryNode<Int> = {
     let eight = BinaryNode(value: 8)
     let nine = BinaryNode(value: 9)
     let ten = BinaryNode(value: 10)
-    
-    
+
+
     seven.leftChild = one
     one.leftChild = zero
     one.rightChild = five
     seven.rightChild = nine
     nine.leftChild = eight
     eight.rightChild = ten
-  
+
     return seven
 }()
 
-print(binaryTree)
-print("InOrder Traversal ------")
-binaryTree.inOrderTraversal { element in
-    print(element)
-}
+//print(binaryTree)
+//print("InOrder Traversal ------")
+//binaryTree.inOrderTravesal { element in
+//    print(element)
+//}
 
-let height = binaryTree.findHeight(node: tree)
-print("Tree Height -- " ,  height)
 
-let serialization = binaryTree.serialization(node: tree)
-print(serialization)
+
+
+//
+//let height = binaryTree.findHeight(node: binaryTree)
+//print("Tree Height -- " ,  height)
+//
+//let serialization = binaryTree.serialization(node: binaryTree)
+//print(serialization)

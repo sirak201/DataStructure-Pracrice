@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F78514A243AB93B002BA0F8 /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F785149243AB93B002BA0F8 /* BinarySearchTree.swift */; };
 		4FD864BC2426AF43009D7CC8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD864BB2426AF43009D7CC8 /* main.swift */; };
 		4FD864C32426B626009D7CC8 /* RandomAlgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD864C22426B626009D7CC8 /* RandomAlgo.swift */; };
 		4FD864C52426B991009D7CC8 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD864C42426B991009D7CC8 /* Stack.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4F785149243AB93B002BA0F8 /* BinarySearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
 		4FD864B82426AF43009D7CC8 /* CompleteDataStructure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CompleteDataStructure; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD864BB2426AF43009D7CC8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		4FD864C22426B626009D7CC8 /* RandomAlgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAlgo.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				4FD864C62426C262009D7CC8 /* LinkedList.swift */,
 				4FEECFDF242FD67200298F0D /* TreeNode.swift */,
 				4FEECFE1242FFEBC00298F0D /* BinaryNode.swift */,
+				4F785149243AB93B002BA0F8 /* BinarySearchTree.swift */,
 				4FD864CA242AE2D9009D7CC8 /* Queue.swift */,
 				4FD864C82426C2CB009D7CC8 /* Node.swift */,
 			);
@@ -146,6 +149,7 @@
 				4FD864CB242AE2D9009D7CC8 /* Queue.swift in Sources */,
 				4FD864C92426C2CB009D7CC8 /* Node.swift in Sources */,
 				4FD864C52426B991009D7CC8 /* Stack.swift in Sources */,
+				4F78514A243AB93B002BA0F8 /* BinarySearchTree.swift in Sources */,
 				4FD864C72426C262009D7CC8 /* LinkedList.swift in Sources */,
 				4FEECFE2242FFEBC00298F0D /* BinaryNode.swift in Sources */,
 				4FD864C32426B626009D7CC8 /* RandomAlgo.swift in Sources */,
