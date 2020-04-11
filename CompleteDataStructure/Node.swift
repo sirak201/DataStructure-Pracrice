@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Node<Value> {
+public class Node<Value : Comparable> {
     
     public var value : Value
     public var next : Node<Value>?
@@ -18,7 +18,29 @@ public class Node<Value> {
         self.next = next
     }
     
+    public init( _ val : Value){
+          self.value = val
+      }
+    
 }
+
+
+public class DoubleNode<Value : Comparable> {
+    public var value : Value
+    public var next : DoubleNode<Value>?
+    public var prev : DoubleNode<Value>?
+    
+    public init( _ val : Value , _ next : DoubleNode<Value>? , _ prev : DoubleNode<Value>?){
+        self.value = val
+        self.next = next
+        self.prev = prev
+    }
+    
+    public init( _ val : Value){
+          self.value = val
+    }
+}
+
 
 
 extension Node: CustomStringConvertible {

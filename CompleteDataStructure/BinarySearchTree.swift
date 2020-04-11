@@ -62,6 +62,59 @@ struct BinarySearchTree<Element : Comparable> {
         return false
     }
     
+    public func removeNode(_ head : inout BinaryNode<Element>? , _ val : Element)  {
+        
+        // If it has no kids
+        if head?.value == val {
+            if head?.leftChild == nil && head?.rightChild == nil {
+                head = nil
+                return
+            }
+         
+            // If it has only one kids
+            if head?.leftChild == nil && head?.rightChild != nil || head?.leftChild != nil && head?.rightChild == nil {
+                guard let left = head?.leftChild else {
+                  head = head?.rightChild
+                  return
+                }
+                head = left
+                
+                return
+            }
+                
+            var copy = head?.rightChild
+                
+            while let nextLeft = copy?.leftChild{
+                copy = nextLeft
+            }
+                
+            head?.value = copy!.value
+            
+            
+            return
+            
+      
+    }
+        
+        
+        while head != nil {
+            if head!.value > val {
+                var left = head?.leftChild
+                removeNode(&left, val)
+                head?.leftChild = left
+                return
+            } else {
+                var right = head?.rightChild
+                removeNode(&right, val)
+                head?.rightChild = right
+                return
+            }
+            
+        }
+        
+        
+    }
+    
     
 
     
