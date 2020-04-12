@@ -18,6 +18,10 @@ class BinaryNode<Element : Comparable> {
     public init (value : Element) {
         self.value = value
     }
+    
+    var min : BinaryNode {
+        return leftChild?.min ?? self
+    }
 
 }
 

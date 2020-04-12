@@ -12,6 +12,7 @@ import Foundation
 
 struct BinarySearchTree<Element : Comparable> {
     var root : BinaryNode<Element>?
+  
     
     
     
@@ -62,57 +63,40 @@ struct BinarySearchTree<Element : Comparable> {
         return false
     }
     
-    public func removeNode(_ head : inout BinaryNode<Element>? , _ val : Element)  {
+    public func removeNode(_ element : Element)  {
         
-        // If it has no kids
-        if head?.value == val {
-            if head?.leftChild == nil && head?.rightChild == nil {
-                head = nil
-                return
-            }
-         
-            // If it has only one kids
-            if head?.leftChild == nil && head?.rightChild != nil || head?.leftChild != nil && head?.rightChild == nil {
-                guard let left = head?.leftChild else {
-                  head = head?.rightChild
-                  return
-                }
-                head = left
-                
-                return
-            }
-                
-            var copy = head?.rightChild
-                
-            while let nextLeft = copy?.leftChild{
-                copy = nextLeft
-            }
-                
-            head?.value = copy!.value
-            
-            
-            return
-            
-      
+
     }
+    
+    private func removeNode(_ tree : BinaryNode<Element>? , _ element : Element) -> BinaryNode<Element>?{
+        
+        guard let tree = tree else {return nil}
         
         
-        while head != nil {
-            if head!.value > val {
-                var left = head?.leftChild
-                removeNode(&left, val)
-                head?.leftChild = left
-                return
-            } else {
-                var right = head?.rightChild
-                removeNode(&right, val)
-                head?.rightChild = right
-                return
+        if tree.value == element {
+            
+            if tree.leftChild == nil && tree.rightChild == nil {
+                return nil
             }
             
+            if tree.leftChild == nil {
+                return tree.rightChild
+            }
+            
+            if tree.rightChild == nil {
+                return tree.leftChild
+            }
+            
+            tree.value = tree.rightChild!.min.value
+            tree.rightChild = removeNode(tree.rightChild, tree.rightChild!.min.value)
+        } else if tree.value < element {
+            tree.leftChild = removeNode(tree.leftChild, element)
+        } else {
+            tree.rightChild = removeNode(tree.rightChild, element)
         }
         
         
+        return tree
     }
     
     

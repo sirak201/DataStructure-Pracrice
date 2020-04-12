@@ -154,4 +154,4 @@ import Foundation
 
 
 var myArr = [4 , 9 , 10 , 3]
-insertionSort(&myArr)
+selectionSort(&myArr)
