@@ -85,29 +85,29 @@ import Foundation
 
 // ------------- Tree ---------------
 
-//var binaryTree: BinaryNode<Int> = {
-//    let zero = BinaryNode(value: 0)
-//    let one = BinaryNode(value: 1)
-//    let five = BinaryNode(value: 5)
-//    let seven = BinaryNode(value: 7)
-//    let eight = BinaryNode(value: 8)
-//    let nine = BinaryNode(value: 9)
-//    let ten = BinaryNode(value: 10)
-//
-//
-//    seven.leftChild = one
-//    one.leftChild = zero
-//    one.rightChild = five
-//    seven.rightChild = nine
-//    nine.leftChild = eight
-//    eight.rightChild = ten
-//
-//    return seven
-//}()
+var binaryTree: BinaryNode<Int> = {
+    let zero = BinaryNode(value: 0)
+    let one = BinaryNode(value: 1)
+    let five = BinaryNode(value: 5)
+    let seven = BinaryNode(value: 7)
+    let eight = BinaryNode(value: 8)
+    let nine = BinaryNode(value: 9)
+    let ten = BinaryNode(value: 10)
+
+
+    seven.leftChild = one
+    one.leftChild = zero
+    one.rightChild = five
+    seven.rightChild = nine
+    nine.leftChild = eight
+    eight.rightChild = ten
+
+    return seven
+}()
 
 
 
-//print(binaryTree)
+print(binaryTree)
 //print("InOrder Traversal ------")
 //binaryTree.inOrderTravesal { element in
 //    print(element)
@@ -129,16 +129,18 @@ import Foundation
 
 
 
-//var exampleTree: BinarySearchTree<Int> {
-//  var bst = BinarySearchTree<Int>()
-//  bst.insert(3)
-//  bst.insert(1)
-//  bst.insert(4)
-//  bst.insert(0)
-//  bst.insert(2)
-//  bst.insert(5)
-//  return bst
-//}
+var exampleTree: BinarySearchTree<Int> {
+  var bst = BinarySearchTree<Int>()
+  bst.insert(3)
+  bst.insert(1)
+  bst.insert(4)
+  bst.insert(0)
+  bst.insert(2)
+  bst.insert(5)
+  return bst
+}
+
+print(BinarySearchTree.isBinarySearchTree(binaryTree))
 //
 //
 //print(exampleTree.root)
@@ -154,4 +156,4 @@ import Foundation
 
 
 var myArr = [4 , 9 , 10 , 3]
-selectionSort(&myArr)
+//selectionSort(&myArr)

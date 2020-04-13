@@ -10,8 +10,32 @@ import Foundation
 
 
 
-struct BinarySearchTree<Element : Comparable> {
+struct BinarySearchTree<Element> : Equatable  where Element : Comparable {
+    
+    static func == (lhs: BinarySearchTree<Element>, rhs: BinarySearchTree<Element>) -> Bool {
+
+        if preOrder(lhs.root) == preOrder(rhs.root) {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     var root : BinaryNode<Element>?
+    
+    private static func preOrder(_ node : BinaryNode<Element>?) -> [Element] {
+        
+        if node == nil {
+            return []
+        }
+        var holder = [Element]()
+        holder.append(node!.value)
+        
+        holder.append(contentsOf: preOrder(node?.leftChild))
+        holder.append(contentsOf: preOrder(node?.rightChild))
+        
+        return holder
+    }
   
     
     
@@ -99,6 +123,32 @@ struct BinarySearchTree<Element : Comparable> {
         return tree
     }
     
+    
+    public  func isBinarySearchTree() -> Bool {
+        self.isBinarySearchTree(root, min: nil, max: nil)
+    }
+    
+    private func isBinarySearchTree(_ node : BinaryNode<Element>? , min : Element? , max : Element?) -> Bool {
+        
+        if node == nil {
+            return true
+        }
+        
+        
+        if let min = min , min >= node!.value {
+            return false
+        }
+        
+        if let max = max , max < node!.value {
+            return false
+        }
+        
+        
+        return isBinarySearchTree(node?.leftChild, min: min, max: node?.value)
+            && isBinarySearchTree(node?.rightChild, min: node?.value, max: max)
+        
+        
+    }
     
 
     
