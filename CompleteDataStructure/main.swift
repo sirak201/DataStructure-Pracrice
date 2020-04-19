@@ -140,7 +140,7 @@ var exampleTree: BinarySearchTree<Int> {
   return bst
 }
 
-print(BinarySearchTree.isBinarySearchTree(binaryTree))
+//print(BinarySearchTree.isBinarySearchTree(binaryTree))
 //
 //
 //print(exampleTree.root)
